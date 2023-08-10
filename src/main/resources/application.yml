@@ -1,0 +1,53 @@
+
+
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    info:
+      enabled: true
+
+spring:
+#  datasource:
+#    #database: debeziumdemo
+#    #port: 1433
+#    #host: localhost
+#    url: jdbc:sqlserver://;serverName=localhost;databaseName=master
+#    username: sa
+#    password: someThingComplicated1234
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#  jpa.hibernate.ddl-auto: none
+#  jpa.show-sql: true
+#  jpa.hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+  kafka:
+    properties:
+      schema.registry.url: http://localhost:8081
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: SpringBootApp-Consumer
+
+#debeziumdemo:
+#  datasource:
+#    host: localhost
+#    port: 1433
+#    database: debeziumdemo
+#    username: sa
+#    password: someThingComplicated1234
+
+#  ## Logging properties
+#logging:
+#  level:
+#    root: INFO
+#    io:
+#      debezium:
+#        sqlserver:
+#          BinlogReader: INFO
+#    com:
+#      nanda:
+#        springbootembeddeddebeziummssql:
+#          debezium: DEBUG
+
+
+
+
